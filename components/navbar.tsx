@@ -224,6 +224,15 @@ export function Navbar() {
                 </div>
               </div>
 
+              <Link href="/sobre">
+                <Button
+                  variant="ghost"
+                  className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-all duration-300 font-medium cursor-pointer"
+                >
+                  Sobre Nós
+                </Button>
+              </Link>
+
               <Link href="/parceiros">
                 <Button
                   variant="ghost"
@@ -352,6 +361,12 @@ export function Navbar() {
                   </div>
                 )}
               </div>
+
+              <Link href="/sobre" onClick={closeMenu}>
+                <Button variant="ghost" className="w-full justify-start text-gray-700 font-medium hover:bg-purple-50 hover:text-purple-600">
+                  Sobre Nós
+                </Button>
+              </Link>
 
               <Link href="/parceiros" onClick={closeMenu}>
                 <Button variant="ghost" className="w-full justify-start text-gray-700 font-medium hover:bg-purple-50 hover:text-purple-600">
