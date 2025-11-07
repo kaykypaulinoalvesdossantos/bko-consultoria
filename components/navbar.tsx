@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { ChevronDown, Menu, X, Phone, Mail, MapPin, Zap, Building2, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { BKOLogo } from "@/components/bko-logo"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -81,15 +81,8 @@ export function Navbar() {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center group cursor-pointer" onClick={closeMenu}>
-              <div className="relative w-32 h-16 rounded-2xl flex items-center justify-center  transition-all duration-500 group-hover:scale-110  ">
-                <Image
-                  src="/Logo/logo-BKO.png"
-                  alt="BKO Consultoria"
-                  width={120}
-                  height={60}
-                  className="object-contain drop-shadow-xl"
-                  priority
-                />
+              <div className="relative rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110">
+                <BKOLogo width={120} compact={false} className="drop-shadow-xl" />
               </div>
             </Link>
 

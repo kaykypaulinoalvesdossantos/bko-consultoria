@@ -37,7 +37,7 @@ export default function SobrePage() {
       setCounters({
         clients: Math.floor(500 * easeOutCubic),
         uptime: Math.min(99.9, (99.9 * easeOutCubic)),
-        years: Math.floor(10 * easeOutCubic),
+        years: Math.floor(20 * easeOutCubic),
       })
 
       if (currentStep >= steps) {
@@ -46,7 +46,7 @@ export default function SobrePage() {
         setCounters({
           clients: 500,
           uptime: 99.9,
-          years: 10,
+          years: 20,
         })
       }
     }, increment)
@@ -79,44 +79,44 @@ export default function SobrePage() {
 
   const timeline = [
     {
-      year: 2014,
-      title: "Fundação da BKO",
-      description: "Início das operações focadas em soluções de telecomunicações para PMEs",
+      year: 2003,
+      title: "O Início da Jornada",
+      description: "Fundação da BKO Consultoria & Gestão com a missão de revolucionar o mercado de telecomunicações no Brasil",
       icon: Rocket,
       color: "from-blue-500 to-cyan-500",
     },
     {
-      year: 2016,
-      title: "Expansão de Parcerias",
-      description: "Estabelecimento de parcerias estratégicas com Vivo, Claro e TIM",
-      icon: Network,
+      year: 2008,
+      title: "Expansão Nacional",
+      description: "Ampliação da atuação para todo o território brasileiro, estabelecendo presença em todas as regiões",
+      icon: Globe,
       color: "from-purple-500 to-pink-500",
     },
     {
-      year: 2018,
-      title: "Certificação Anatel",
-      description: "Reconhecimento oficial como consultoria certificada em telecomunicações",
-      icon: Award,
+      year: 2012,
+      title: "Parcerias Estratégicas",
+      description: "Consolidação de parcerias com as maiores operadoras: Vivo, Claro, TIM e outras líderes do mercado",
+      icon: Network,
       color: "from-green-500 to-emerald-500",
     },
     {
-      year: 2020,
-      title: "Inovação Digital",
-      description: "Lançamento de soluções cloud e infraestrutura empresarial",
-      icon: Lightbulb,
+      year: 2016,
+      title: "Certificação e Reconhecimento",
+      description: "Reconhecimento oficial como consultoria certificada em telecomunicações pela Anatel",
+      icon: Award,
       color: "from-orange-500 to-red-500",
     },
     {
-      year: 2022,
-      title: "500+ Empresas",
-      description: "Marco histórico: mais de 500 empresas conectadas",
-      icon: Trophy,
+      year: 2020,
+      title: "Era da Transformação Digital",
+      description: "Lançamento de soluções cloud, infraestrutura empresarial e tecnologias de ponta",
+      icon: Lightbulb,
       color: "from-yellow-500 to-orange-600",
     },
     {
       year: 2024,
-      title: "Líder Regional",
-      description: "Consolidação como referência em soluções corporativas de telecom",
+      title: "Líder em Telecomunicações",
+      description: "Mais de 500 empresas conectadas e consolidação como referência nacional em soluções corporativas",
       icon: Star,
       color: "from-purple-600 to-cyan-500",
     },
@@ -241,7 +241,7 @@ export default function SobrePage() {
                 <div className="px-4 py-2 rounded-full border border-cyan-400/50 bg-cyan-500/10 backdrop-blur-sm">
                   <span className="text-cyan-300 text-sm font-semibold flex items-center gap-2">
                     <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
-                    10 Anos Conectando Empresas ao Futuro
+                    Mais de 20 Anos Conectando Empresas ao Futuro
                   </span>
                 </div>
               </div>
@@ -255,8 +255,9 @@ export default function SobrePage() {
               </p>
               
               <p className="text-lg text-white/80 mb-8 text-balance max-w-3xl leading-relaxed">
-                Desde 2014, a BKO Consultoria & Gestão tem sido pioneira em conectar empresas brasileiras 
-                às melhores soluções em telecomunicações, combinando expertise técnica com atendimento humanizado
+                Desde 2003, a BKO Consultoria & Gestão tem sido pioneira em conectar empresas brasileiras 
+                às melhores soluções em telecomunicações, combinando mais de duas décadas de expertise técnica 
+                com atendimento humanizado e inovação constante
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -302,7 +303,7 @@ export default function SobrePage() {
               Números que Falam por Si
             </h2>
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Uma década de excelência refletida em resultados concretos
+              Mais de duas décadas de excelência refletida em resultados concretos
             </p>
           </div>
 
@@ -332,7 +333,7 @@ export default function SobrePage() {
               <Trophy className="w-16 h-16 text-orange-300 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" />
               <p className="text-6xl font-bold text-white mb-2">{counters.years}+</p>
               <p className="text-white/90 text-lg font-semibold">Anos de Mercado</p>
-              <p className="text-white/70 text-sm mt-2">Experiência consolidada</p>
+              <p className="text-white/70 text-sm mt-2">Mais de 20 anos de experiência</p>
             </div>
           </div>
         </div>
@@ -352,13 +353,13 @@ export default function SobrePage() {
               </div>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Uma Década de{" "}
+              Mais de Duas Décadas de{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-cyan-500">
                 Transformação Digital
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Da fundação à liderança: conheça os marcos que nos tornaram referência em consultoria de telecomunicações
+              Desde 2003 conectando empresas ao futuro: conheça os marcos que nos tornaram referência em consultoria de telecomunicações
             </p>
           </div>
 
@@ -404,6 +405,64 @@ export default function SobrePage() {
                   </div>
                 )
               })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nossa Jornada - Seção Criativa */}
+      <section className="py-24 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <div className="px-6 py-2 rounded-full border-2 border-cyan-400/50 bg-cyan-500/10 backdrop-blur-sm">
+                <span className="text-cyan-300 text-sm font-bold flex items-center gap-2">
+                  <Rocket className="w-4 h-4" />
+                  NOSSA JORNADA
+                </span>
+              </div>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Uma História de{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                Inovação e Excelência
+              </span>
+            </h2>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/10 shadow-2xl">
+              <div className="space-y-6 text-white/90 leading-relaxed">
+                <p className="text-xl md:text-2xl font-semibold text-cyan-300 mb-6">
+                  O Grupo BKO nasceu com a missão de revolucionar o mercado de telecomunicações, oferecendo soluções personalizadas e de alta qualidade para empresas de todos os portes.
+                </p>
+                
+                <p className="text-lg md:text-xl">
+                  Desde <span className="font-bold text-cyan-400">2003</span>, a <span className="font-bold text-purple-300">BKO Consultoria & Gestão</span> tem sido pioneira em conectar empresas brasileiras às melhores tecnologias de telecomunicações. Com mais de <span className="font-bold text-cyan-400">20 anos de experiência</span> no setor, construímos uma reputação sólida baseada em <span className="font-semibold">confiança, inovação e excelência no atendimento ao cliente</span>.
+                </p>
+
+                <p className="text-lg md:text-xl">
+                  Nossa trajetória é marcada por <span className="font-semibold">parcerias estratégicas com as maiores operadoras do país</span> - Vivo, Claro, TIM e outras líderes de mercado - permitindo que ofereçamos um <span className="font-bold text-purple-300">portfólio completo de soluções em telecomunicações</span>, sempre com o compromisso de entregar a melhor tecnologia e o melhor suporte aos nossos clientes.
+                </p>
+
+                <p className="text-lg md:text-xl">
+                  Trabalhamos com <span className="font-bold text-cyan-400">telecomunicações de todos os tipos</span>: desde internet fibra óptica e links dedicados até soluções móveis 5G, PABX em nuvem, cloud computing e energia. Cada projeto é tratado com dedicação única, porque entendemos que <span className="font-semibold">cada empresa tem necessidades específicas</span> e merece uma solução sob medida.
+                </p>
+
+                <div className="mt-8 pt-8 border-t border-white/20">
+                  <p className="text-xl md:text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400">
+                    Mais de 20 anos conectando empresas ao futuro das telecomunicações.
+                  </p>
+                  <p className="text-lg text-center text-white/80 mt-4">
+                    Essa é a nossa história. E a sua empresa pode fazer parte dela.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -597,32 +597,6 @@ Mensagem: ${formData.message}`
                 </div>
               </div>
 
-              {/* Endereço */}
-              <div className="bg-white rounded-2xl p-8 border-2 border-gray-100">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-cyan-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-xl text-gray-900 mb-3">Nosso Escritório</h3>
-                    <p className="text-gray-700 leading-relaxed mb-4">
-                      Rua Alfredo Pujol, 545<br />
-                      Santana, São Paulo - SP<br />
-                      CEP: 02017-000
-                    </p>
-                    <a 
-                      href="https://maps.google.com/?q=Rua+Alfredo+Pujol+545+Santana+São+Paulo" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold"
-                    >
-                      <Globe className="w-4 h-4" />
-                      Ver no Mapa
-                    </a>
-                  </div>
-                </div>
-              </div>
-
               {/* Horário */}
               <div className="bg-white rounded-2xl p-8 border-2 border-gray-100">
                 <div className="flex items-start gap-4">
@@ -638,7 +612,7 @@ Mensagem: ${formData.message}`
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-gray-700 font-semibold">Sábado</span>
-                        <span className="text-gray-600">08:00 - 12:00</span>
+                        <span className="text-gray-600">Fechado</span>
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-gray-700 font-semibold">Domingo</span>

@@ -201,27 +201,6 @@ export function Footer() {
               ))}
             </ul>
 
-            {/* Social Links */}
-            <div className="mt-8">
-              <h4 className="font-semibold text-sm mb-4 text-gray-300">Redes Sociais</h4>
-              <div className="flex gap-3">
-                {socialLinks.map((social) => {
-                  const Icon = social.icon
-                  return (
-                    <a
-                      key={social.label}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 bg-white/5 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
-                      aria-label={social.label}
-                    >
-                      <Icon className="w-5 h-5" />
-                    </a>
-                  )
-                })}
-              </div>
-            </div>
           </div>
         </div>
 
