@@ -212,7 +212,15 @@ export function Footer() {
                 © {currentYear} <span className="font-semibold text-white">BKO Consultoria & Gestão</span>. Todos os direitos reservados.
               </p>
               <p className="text-gray-500 text-xs mt-1">
-                CNPJ: 00.000.000/0001-00 | Desenvolvido com 💜 por BKO Tech
+                CNPJ: 23.323.116/0001-02 | Desenvolvido por{" "}
+                <a
+                  href="https://infinitygroups.com.br/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-purple-400 hover:text-purple-300 transition-colors underline"
+                >
+                  Infinity Groups
+                </a>
               </p>
             </div>
 

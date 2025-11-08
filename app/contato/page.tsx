@@ -281,7 +281,7 @@ Mensagem: ${formData.message}`
                     <span className="font-bold text-gray-900">Localização</span>
                   </div>
                   <p className="text-sm text-gray-700">
-                    Santana, São Paulo - SP
+                    São Paulo - SP
                   </p>
                 </div>
                 
