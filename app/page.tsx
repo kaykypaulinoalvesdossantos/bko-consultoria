@@ -7,9 +7,9 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { 
-  Wifi, Smartphone, LinkIcon, Cloud, TrendingUp, Users, Zap, Shield, 
-  Play, ArrowRight, CheckCircle2, Network, Globe, Award 
+import {
+  Wifi, Smartphone, LinkIcon, Cloud, TrendingUp, Users, Zap, Shield,
+  Play, ArrowRight, CheckCircle2, Network, Globe, Award
 } from "lucide-react"
 
 export default function Home() {
@@ -164,24 +164,28 @@ export default function Home() {
       title: "Experiência Comprovada",
       description: "Mais de 10 anos no mercado de telecomunicações com centenas de clientes satisfeitos",
       number: "01",
+      link: "/sobre",
     },
     {
       icon: Users,
       title: "Parcerias Estratégicas",
       description: "Trabalhamos com os melhores provedores do mercado para oferecer as melhores soluções",
       number: "02",
+      link: "/parceiros",
     },
     {
       icon: Zap,
       title: "Atendimento Personalizado",
       description: "Soluções customizadas para seu negócio com consultoria especializada",
       number: "03",
+      link: "/para-sua-empresa/fibra",
     },
     {
       icon: Shield,
       title: "Suporte Ágil e Eficaz",
       description: "Equipe técnica disponível 24/7 para resolver qualquer problema rapidamente",
       number: "04",
+      link: "/contato",
     },
   ]
 
@@ -201,9 +205,8 @@ export default function Home() {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
             style={{ background: slide.gradient }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
@@ -235,7 +238,7 @@ export default function Home() {
 
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link href="https://wa.me/5511982437768?text=Olá%20BKO%20Consultoria">
-                      <button 
+                      <button
                         className="btn-primary-carousel text-base w-full sm:w-auto group cursor-pointer"
                         style={{ height: '3.5rem', minWidth: '12rem' }}
                       >
@@ -243,7 +246,7 @@ export default function Home() {
                         <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                       </button>
                     </Link>
-                    <button 
+                    <button
                       className="btn-outline-light-carousel text-base w-full sm:w-auto flex items-center justify-center gap-2 group cursor-pointer"
                       style={{ height: '3.5rem', minWidth: '12rem' }}
                     >
@@ -282,9 +285,8 @@ export default function Home() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`transition-all duration-300 rounded-full cursor-pointer ${
-                index === currentSlide ? "bg-cyan-400 w-8 h-3" : "bg-white/40 hover:bg-white/60 w-3 h-3"
-              }`}
+              className={`transition-all duration-300 rounded-full cursor-pointer ${index === currentSlide ? "bg-cyan-400 w-8 h-3" : "bg-white/40 hover:bg-white/60 w-3 h-3"
+                }`}
               aria-label={`Ir para slide ${index + 1}`}
             />
           ))}
@@ -378,13 +380,13 @@ export default function Home() {
           {/* Grid de Parceiros - Todos com o MESMO tratamento */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {partners.map((partner, index) => (
-                <div
-                  key={index}
-                  className="group relative cursor-pointer"
-                  onMouseEnter={() => setHoveredPartner(index)}
-                  onMouseLeave={() => setHoveredPartner(null)}
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
+              <div
+                key={index}
+                className="group relative cursor-pointer"
+                onMouseEnter={() => setHoveredPartner(index)}
+                onMouseLeave={() => setHoveredPartner(null)}
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
                 <div className={`
                   h-full bg-white rounded-2xl overflow-hidden
                   border-2 border-gray-100
@@ -399,7 +401,7 @@ export default function Home() {
                     flex items-center justify-center overflow-hidden
                   `}>
                     <div className="absolute inset-0 bg-white/10 translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
-                    
+
                     <div className="w-20 h-20 group-hover:scale-110 transition-transform duration-300 relative z-10 flex items-center justify-center">
                       <div className="w-full h-full bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg flex items-center justify-center">
                         <Image
@@ -515,36 +517,38 @@ export default function Home() {
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon
               return (
-                <div
+                <Link
                   key={index}
-                  className="relative group cursor-pointer"
+                  href={benefit.link}
+                  className="relative group cursor-pointer block"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="absolute -top-4 -right-4 text-8xl font-bold text-purple-50 group-hover:text-purple-100 transition-colors pointer-events-none">
-                    {benefit.number}
-                  </div>
+                  <div className="relative bg-white p-8 rounded-2xl border-2 border-gray-100 hover:border-purple-200 hover:shadow-xl transition-all duration-300 h-full overflow-hidden">
+                    {/* Decorative Number inside the card */}
+                    <div className="absolute top-2 right-4 text-6xl font-bold text-gray-100 group-hover:text-purple-50 transition-colors pointer-events-none select-none">
+                      {benefit.number}
+                    </div>
 
-                  <div className="relative bg-white p-8 rounded-2xl border-2 border-gray-100 hover:border-purple-200 hover:shadow-xl transition-all duration-300 h-full">
-                    <div className="mb-6">
+                    <div className="mb-6 relative z-10">
                       <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
                         <Icon className="w-8 h-8 text-white" />
                       </div>
                     </div>
-                    
-                    <h3 className="font-bold text-xl mb-3 text-gray-900 group-hover:text-purple-600 transition-colors">
+
+                    <h3 className="font-bold text-xl mb-3 text-gray-900 group-hover:text-purple-600 transition-colors relative z-10">
                       {benefit.title}
                     </h3>
-                    
-                    <p className="text-gray-600 leading-relaxed">
+
+                    <p className="text-gray-600 leading-relaxed relative z-10">
                       {benefit.description}
                     </p>
 
-                    <div className="mt-6 flex items-center gap-2 text-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                    <div className="mt-6 flex items-center gap-2 text-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 relative z-10">
                       <span className="text-sm font-semibold">Saiba mais</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
-                </div>
+                </Link>
               )
             })}
           </div>
@@ -571,7 +575,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Pronto para Levar Sua Conectividade ao Próximo Nível?
           </h2>
-          
+
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
             Entre em contato com nossos especialistas e descubra como podemos impulsionar seu negócio
             com as melhores soluções em telecomunicações do mercado
@@ -579,7 +583,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link href="https://wa.me/5511982437768?text=Olá%20BKO%20Consultoria">
-              <button 
+              <button
                 className="btn-primary-cta text-lg group shadow-2xl cursor-pointer"
                 style={{ height: '4rem', minWidth: '16rem' }}
               >
@@ -589,7 +593,7 @@ export default function Home() {
               </button>
             </Link>
             <Link href="/contato">
-              <button 
+              <button
                 className="btn-secondary-light-cta text-lg group cursor-pointer"
                 style={{ height: '4rem', minWidth: '16rem' }}
               >
